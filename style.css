@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+ 
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.mainContainer {
+    height: 530px;
+    width: 470px;
+    background-color: #222;
+    margin-top: 100px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+.mainContainer::after,
+.mainContainer::before {
+    content: "";
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(
+        45deg, 
+        #00FFFF, 
+        #F0FFFF, 
+        #0000FF, 
+        #0096FF, 
+        #00008B, 
+        #00FFFF, 
+        #F0FFFF, 
+        #0000FF, 
+        #0096FF, 
+        #00008B
+    );
+    animation: animatedShadow 10s linear infinite;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.mainContainer::after {
+    filter: blur(30px);
+}
+
+@keyframes animatedShadow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+#dataContainer {
+    margin-left: 30px;
+}
+#heading {
+    margin-top: 40px;
+    text-align: center;
+    margin-right: 30px;
+}
+.amountLabel {
+    display: inline-block;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+#amountText {
+    display: block;
+    margin-top: 10px;
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: black;
+}
+#amountText::placeholder {
+    font-weight: 700;
+    color: black;
+}
+#amountText:focus {
+    border-color: blue;
+    outline: none;
+}
+#fromToContainer {
+    margin-top: 20px;
+}
+.Text {
+    font-weight: 700;
+}
+.to {
+    margin-left: 250px;
+}
+#currencySelectionMainContainer {
+    margin-top: 10px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    display: inline-block;
+}
+#currencySelectionMainContainer1 {
+    margin-top: 10px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    display: inline-block;
+}
+#currentCurrencyDisplayer {
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+#currentCurrencyDisplayer1 {
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin-left: 70px;
+}
+#usFlag {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+#pakFlag {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+#dropdownArrow {
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
+}
+#dropdownMenuContainer {
+    height: auto;
+    width: 70px;
+    border: 1px solid black;
+    position: absolute;
+    overflow: scroll;
+    right: 0px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+}
+#dropdownMenuContainer1 {
+    height: auto;
+    width: 70px;
+    border: 1px solid black;
+    position: absolute;
+    overflow: scroll;
+    right: 0px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+.currencies {
+    display: inline-block;
+    margin-top: 5px;
+}
+.currencies1 {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+    height: 0px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+}
+::-webkit-scrollbar-thumb {
+    background: #888; /* Background color of the handle */
+}
+#exchangeArrows {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+#exchangeArrowImg {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+#gettingDataPrompt {
+    margin-top: 40px;
+}
+#gettingDataPrompt {
+    position: relative;
+    z-index: 1;
+}
+#calculateExchangeRate {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+#btn {
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #665af5;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+#btn h1{
+    font-size: x-large;
+}

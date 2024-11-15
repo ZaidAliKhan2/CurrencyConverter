@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="icon" href="money.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainContainer">
+     <div id="dataContainer">
+        <h1 id="heading">Currency Converter</h1>
+        <label for="amountText" class="amountLabel">Enter Amount</label>
+        <input type="number" name="amount" placeholder = 1 id="amountText" >
+
+        <div id="fromToContainer">
+            <span class="from Text">From</span>
+            <span class="to Text">To</span>
+        </div>
+        <div id="currencySelectionMainContainer" onclick="dropdownMenuAppear()" >
+            <div id="currentCurrencyDisplayer">
+                <img id="usFlag" src="usa.png" alt="usFlag">
+                <span id="usaText">USD</span>
+                <img id="dropdownArrow" src="down-arrow.png" alt="downarrow">
+            </div>
+
+            <div id="dropdownMenuContainer" style="display: none;">
+                <a class="usa currencies" data-flag="usa.png" >USD</a>
+                <a class="ind currencies" data-flag="india.png" >INR</a>
+                <a class="pak currencies" data-flag="flag.png"  >PKR</a>
+                <a class="uk currencies" data-flag="united-kingdom.png" >GBP</a>
+                <a class="nepal currencies" data-flag="nepal.png" >NPR</a>
+                <a class="swiss currencies" data-flag="switzerland.png" >CHF</a>
+                <a class="afg currencies" data-flag="afghanistan.png" >AFN</a>
+                <a class="europe currencies" data-flag="european-union.png" >EUR</a>
+            </div>
+        
+        </div>
+        
+           <div id="exchangeArrows"><img id="exchangeArrowImg" src="opposite-arrows.png"></div>
+
+           <div id="currencySelectionMainContainer1" onclick="dropdownMenuAppear1()" >
+            <div id="currentCurrencyDisplayer1">
+                <img id="pakFlag" src="flag.png" alt="pakFlag">
+                <span id="pakText">PKR</span>
+                <img id="dropdownArrow" src="down-arrow.png" alt="downarrow">
+            </div>
+
+            <div id="dropdownMenuContainer1" style="display: none;">
+                <a class="pak currencies1" data-flag1="flag.png"  >PKR</a>
+                <a class="nepal currencies1" data-flag1="nepal.png" >NPR</a>
+                <a class="usa currencies1" data-flag1="usa.png" >USD</a>
+                <a class="uk currencies1" data-flag1="united-kingdom.png" >GBP</a>
+                <a class="ind currencies1" data-flag1="india.png" >INR</a>
+                <a class="europe currencies1" data-flag1="european-union.png" >EUR</a>
+                <a class="afg currencies1" data-flag1="afghanistan.png" >AFN</a>
+                <a class="swiss currencies1" data-flag1="switzerland.png" >CHF</a>
+            </div>
+        
+        </div>   
+
+        <div id="gettingDataPrompt">
+            
+        </div>
+
+        <div id="calculateExchangeRate">
+            <button id="btn">
+                <h1>Get Exchange Rate....</h1>
+            </button>
+        </div>
+
+      
+     </div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>
